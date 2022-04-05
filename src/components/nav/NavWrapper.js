@@ -11,7 +11,6 @@ class NavWrapper extends Component {
         this.ref = {
             router: React.createRef()
         }
-        // this.history = createBrowserHistory();
     }
 
     componentDidMount() {
@@ -44,14 +43,10 @@ class NavWrapper extends Component {
             } else if (url.hash
                 || url.pathname.endsWith('.pdf')
             ) {
-
                 // Allow local navigation
+
             } else {
                 e.preventDefault();
-                // console.log('click', target, url);
-                // let history = useHistory();
-                console.log('this.props', this.props);
-                // this.ref.router.current.history.push(url.pathname);
                 this.props.history.push(url.pathname);
                 window.scroll({
                     top: 0,

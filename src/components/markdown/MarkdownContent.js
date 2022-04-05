@@ -27,13 +27,13 @@ export default class MarkdownContent extends React.Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.file !== this.props.file) {
-            console.log("Reloading content: ", this.props.file);
+            // console.log("Reloading content: ", this.props.file);
             this.loadContent();
         }
     }
 
     componentDidMount() {
-        console.log("Loading content: ", this.props.file);
+        // console.log("Loading content: ", this.props.file);
         this.loadContent();
     }
 
